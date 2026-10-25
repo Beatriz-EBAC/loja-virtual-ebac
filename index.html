@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechStore | Tecnologia para você</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="limite">
+      <h1>Tech<span>Store</span></h1>
+      <nav><a href="#sobre">Sobre a loja</a><a href="#produtos">Produtos</a></nav>
+    </div>
+  </header>
+
+  <main class="limite">
+    <section id="sobre" class="sobre">
+      <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80" alt="Interior de uma loja moderna">
+      <div>
+        <h2>Sobre a TechStore</h2>
+        <p>Bem-vindo à TechStore! Somos apaixonados por tecnologia e selecionamos produtos que tornam seu dia a dia mais prático, conectado e produtivo.</p>
+        <p>Trabalhamos com qualidade, atendimento próximo e novidades para quem busca desempenho e inovação.</p>
+      </div>
+    </section>
+
+    <section id="produtos">
+      <h2>Nossos produtos</h2>
+      <div class="produtos">
+        <article class="produto">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80" alt="Fone de ouvido">
+          <h3>Fone Bluetooth</h3>
+          <p>Som envolvente e conforto para ouvir suas músicas favoritas.</p>
+          <button onclick="adicionar('Fone Bluetooth')">Adicionar ao carrinho</button>
+        </article>
+        <article class="produto">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80" alt="Relógio inteligente">
+          <h3>Smartwatch</h3>
+          <p>Acompanhe sua rotina com estilo e tecnologia no pulso.</p>
+          <button onclick="adicionar('Smartwatch')">Adicionar ao carrinho</button>
+        </article>
+        <article class="produto">
+          <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=700&q=80" alt="Câmera fotográfica">
+          <h3>Câmera digital</h3>
+          <p>Registre momentos especiais com imagens incríveis.</p>
+          <button onclick="adicionar('Câmera digital')">Adicionar ao carrinho</button>
+        </article>
+        <article class="produto">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80" alt="Acessório de áudio">
+          <h3>Headphone Premium</h3>
+          <p>Áudio de qualidade para trabalhar, estudar e relaxar.</p>
+          <button onclick="adicionar('Headphone Premium')">Adicionar ao carrinho</button>
+        </article>
+      </div>
+      <p id="carrinho" aria-live="polite">Carrinho: 0 produtos</p>
+    </section>
+  </main>
+
+  <footer><p>© 2026 TechStore — Tecnologia para o seu dia a dia.</p></footer>
+
+  <script>
+    let quantidade = 0;
+    function adicionar(produto) {
+      quantidade++;
+      document.getElementById('carrinho').textContent =
+        'Carrinho: ' + quantidade + (quantidade === 1 ? ' produto' : ' produtos');
+      alert(produto + ' adicionado ao carrinho!');
+    }
+  </script>
+</body>
+</html>
