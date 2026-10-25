@@ -1,0 +1,212 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #252525;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.limite {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.cabecalho {
+  background: #252525;
+  color: white;
+  padding: 22px 0;
+  margin-bottom: 36px;
+}
+
+.cabecalho .limite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cabecalho h1 {
+  font-size: 30px;
+}
+
+.cabecalho h1 span {
+  color: #39a9db;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #39a9db;
+}
+
+.sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding-bottom: 40px;
+  margin-bottom: 35px;
+  border-bottom: 2px solid #39a9db;
+}
+
+.sobre img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+#produtos {
+  padding-bottom: 36px;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.produto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.produto img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.produto h3 {
+  font-size: 19px;
+}
+
+.produto p {
+  font-size: 15px;
+  flex-grow: 1;
+}
+
+button {
+  width: 100%;
+  padding: 12px 10px;
+  border: 0;
+  border-radius: 4px;
+  background: #167d3f;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #105e2e;
+}
+
+#carrinho {
+  margin-top: 24px;
+  font-weight: bold;
+}
+
+footer {
+  background: #252525;
+  color: white;
+  text-align: center;
+  padding: 22px;
+  margin-top: 25px;
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .sobre {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre img {
+    height: 300px;
+  }
+
+  .produtos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 20px;
+  }
+
+  .produto img {
+    height: 240px;
+  }
+}
+
+/* Celular */
+@media (max-width: 640px) {
+  .cabecalho {
+    margin-bottom: 25px;
+  }
+
+  .cabecalho .limite {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cabecalho h1 {
+    font-size: 27px;
+  }
+
+  nav {
+    gap: 22px;
+  }
+
+  .sobre {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+  }
+
+  .sobre img {
+    height: 220px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .produtos {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .produto img {
+    height: 250px;
+  }
+
+  .produto h3 {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 14px;
+  }
+}
